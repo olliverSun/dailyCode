@@ -12,7 +12,7 @@ public class InitDriver {
     HashMap driverConfig = new HashMap();
 
 
-    InitDriver(String path) throws IOException {
+    public InitDriver(String path) throws IOException {
 //        FileReader fr = new FileReader(new File(path));
         if(path.endsWith(".properties")){
             realinit(path);
