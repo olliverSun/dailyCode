@@ -39,7 +39,9 @@ public class JFrameAndJDialog {
                        }
                     }
                 });
+
                 jPanel2.setVisible(true);
+
             }
         });
 

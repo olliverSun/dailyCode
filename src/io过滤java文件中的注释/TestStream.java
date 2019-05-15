@@ -6,7 +6,7 @@ import java.io.*;
 
 public class TestStream {
 
-//    相对路径起始处没有斜杠
+//    相对路径起始处没有斜杠  复制
     @Test
     public void testInStream() throws IOException {
         byte[] fullBts = read(1024, "笔记/1.txt");
