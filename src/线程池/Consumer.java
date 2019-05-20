@@ -14,7 +14,6 @@ public class Consumer implements Worker{
     public  void work(Stack stack) throws InterruptedException {
         while(true){
         synchronized(stack){
-
                 if(stack.Size()<=0)
                     stack.wait();
                 if(stack.Size()>0)

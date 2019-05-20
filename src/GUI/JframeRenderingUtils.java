@@ -31,11 +31,18 @@ public class JframeRenderingUtils {
     /**
      * 显示，点击叉掉就关闭
      */
-
     private void setVisibleAndCloseWhenClickX(JFrame jf,boolean isTelescopic){
         jf.setResizable(isTelescopic);
         jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jf.setVisible(true);
 
+    }
+
+    /**
+     * 为容器添加选项卡
+     * @param container
+     */
+    public void addTabbed(Container container,JTabbedPane component){
+        container.add(component);
     }
 }
