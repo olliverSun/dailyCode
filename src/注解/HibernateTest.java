@@ -75,9 +75,6 @@ public class HibernateTest {
             hashMap.put(key,value);
             hb.put(key,hashMap);
         }
-
-
-
     }
 
     private HashMap mappingCloumn(Class clazz) throws Exception {
@@ -85,6 +82,7 @@ public class HibernateTest {
         Field[] fields = clazz.getDeclaredFields();
         for (Field field:fields){
             ToColumn annotation = field.getAnnotation(ToColumn.class);
+            Mainkey annotation2 =field.getAnnotation(Mainkey.class);
             if (annotation!=null){
                 fieldcloumn.put(field.getName(),annotation.ColumName());
             }else{
