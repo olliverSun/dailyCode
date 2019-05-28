@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/plain" charset="UTF-8">
+    <title>标题</title>
+
+</head>
+<body>
+
+       段落
+       段落
+       段落
+       <p>p段落</p>    <!--段落，自起一行，完结后再起一行-->
+       <b>b粗体</b><strong>strong粗体</strong><br/> <!--一样的粗体效果-->
+       <i>i斜体italic</i><em>斜体Emphasized</em><br/> <!--一样的斜体效果-->
+       <p><i>pi粗斜体</i></p><br/>
+       <ins>下划线</ins>
+<p>没用预格式的java代码</p>
+    class HelloWorld{
+       public static void main(String[] args){
+       System.out.println("HelloWorld");
+       }
+       }
+<p>用了预格式的java代码</p>   <!--预格式的意思就是标签中的内容按照编辑时的格式进行排列，不用换行符或者其他,预格式里也可以使用标签-->
+<pre><del>class HelloWorld{ <!--del标签可以做出删除效果，<s>标签也可以-->
+       public static void main(String[] args){
+       System.out.println("HelloWorld");
+       }
+       }</del></pre>
+
+       <p><a href="技能.html">a标签超链接</a></p>
+       <ul>
+           <li>列表1</li>
+           <li>列表2</li>
+           <li>列表3</li>
+       </ul><br>
+<!------------------------------------------表单相关组件------------------------------------------------------------->
+       <form>
+           单选框一<input type="radio"  name="danxuan" value="单选一"><br><!--要多选一的话，多个单选框name值必须一样-->
+           单选框二<input type="radio" name="danxuan" value="单选二"><br><!--要多选一的话，多个单选框name值必须一样-->
+           文本输入<input type="text" value="文本框初始值" ><br>
+           文本背景输入<input type="text"  placeholder="文本框初始值"><br>
+           多选框:<br>多选一<input type="checkbox"><br>
+           多选二<input type="checkbox"><br>
+           多选三<input type="checkbox"><br>
+           多选四<input type="checkbox"><br>
+           <p>
+               <select>
+                   <option value="option1">下拉一</option>
+                   <option value="option2">下拉二</option>
+                   <option value="option3">下拉三</option>
+                   <option value="option4">下拉四</option>
+               </select>
+           </p>
+           <textarea  name="myTestarea">
+            </textarea>
+           <br>
+           <input type="button" value="一个按钮" name="mybutton">
+       </form>
+<!--☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★☆★-->
+<!-------------------------------------------------------CSS基础部分-------------------------------------------------------------->
+
+       <style>
+           /*CSS的注释格式*/
+           /*三大选择器*/
+           p{/*标签选择器*/
+               color: red;
+           }
+
+           #123{/*id选择器*/
+               color: blanchedalmond;
+           }
+           .typeNameLabel{/*类选择器*/
+               background: blueviolet;
+           }
+           p.simpe{
+               color: coral;
+           }
+           /*CSS的超链状态表示herf在不同鼠标事件下的状态，类似于SWING组件的事件*/
+
+       </style>
+       <p class="typeNameLabel">123</p>
+       <p class="typeNameLabel">123</p>
+       <p class="typeNameLabel">123</p>
+       <p id="123" class="typeNameLabel">123</p>
+       <p class="simpe">多层选择器，先选择标签，再选择class</p>
+        <!--绝对定位-->
+        <style>
+            #abso{
+                position: absolute;
+                left: 10px;
+                top: 10px;
+            }
+            #rela{
+
+            }
+        </style>
+        <span id="abso">绝对定位会将元素原有位置空出来，根据父容器的位置相对的定位位置，可能会出现覆盖原有元素的情况</span>
+         <p id="rela">相对定位</p>
+            <br>
+            <hr/>
+       <style>
+           .float{
+               border:1px red solid ;
+           }
+       </style>
+        <div class="float">不浮动第一</div>
+       <div class="float">不浮动第二</div>
+       <div class="float" style="float: right">浮动第三，向右浮动</div>
+       <div class="float">不浮动第四</div>
+       <div class="float" style="float: left">div浮动是否可以理解成两个图层，显然float渲染过的div就不是block级别的了</div>
+        <span class="float" style="margin-left: 20px">这是一个左外边距12的span，显然这是一个span,inline</span>
+       <div class="float" style="margin-left: 20px;">这是一个左外边距12的div,</div>
+        <hr/>
+
+       <div class="float" style="text-align: center">内容居中很简单，只需设置text-align: center</div>
+        <div class="float" style="text-align:center;width: 100px;margin:0 auto" >
+            元素和内容都居中居中,需要设置margin:0 auto</div>
+       <span class="float" style="text-align:center;width: 100px;margin:0 auto;display: block" >
+           由于span是内联元素，不能设置width，span的长度随内容的长度而改变，所以span居中必须设置成块元素</span>
+        <hr>
+        <div class="float" style="float: left;background-color: aqua">左侧浮动</div>
+        <div class="float" style="background-color:sandybrown;height: 30px">右侧自动占满,且由于高度不同，
+        右边也会自动的浮动，必须添加overflow：hidden来隐藏浮动</div>
+        <hr>
+       <div class="float" style="float: left;background-color: aqua">左侧浮动</div>
+       <div class="float" style="background-color:sandybrown;height: 30px;overflow: hidden" >右侧自动占满,且由于高度不同，
+           右边也会自动的浮动，必须添加overflow：hidden来隐藏浮动</div>
+        <hr>
+        <a href="hero.html" style="color: red">阶段练习</a>
+</body>
+</html>
+
